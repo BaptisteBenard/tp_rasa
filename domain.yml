@@ -9,6 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - weather
+  - weather_location
 
 responses:
   utter_greet:
@@ -31,10 +32,26 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
   utter_weather:
-  - text: "Go outside fucking nerd!" 
+  - text: "Where are you?" 
+
 
 actions:
   - action_weather
+
+entities:
+  - place
+
+slots:
+  place:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: place
+
+forms:
+  weather_form:
+    required_slots:
+      - place
 
 session_config:
   session_expiration_time: 60

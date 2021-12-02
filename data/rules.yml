@@ -2,6 +2,11 @@ version: "3.0"
 
 rules:
 
+- rule: Say hello anytime the user says hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -12,7 +17,19 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Tell the weather when asked
+- rule: Activate weather form
   steps:
   - intent: weather
+  - action: utter_weather
+  - action: weather_form
+  - active_loop: weather_form
+
+- rule: Submit weather form
+  condition:
+  - active_loop: weather_form
+  steps:
+  - action: weather_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: place
   - action: action_weather

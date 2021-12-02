@@ -29,12 +29,17 @@ class ActionWeather(Action):
     def name(self) -> Text:
         return "action_weather"
 
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ["place"]
+
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-
-        p = { "query": "bordeaux" }
+        place = str(tracker.get_slot("place"))
+        place = place.lower()
+        p = { "query": place }
         r = requests.get("https://www.metaweather.com//api/location/search/", params = p)
         j = r.json()[0]
 
@@ -45,6 +50,8 @@ class ActionWeather(Action):
         abb, temp = data["weather_state_abbr"], data["the_temp"]
         w_ph = dict_weather[abb]
         temp_ph = " The temperature is " + str(round(temp)) + "°C."
+
+        dispatcher.utter_message()
 
         dispatcher.utter_message(text=w_ph + temp_ph)
 
