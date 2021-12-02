@@ -29,7 +29,7 @@ rules:
   - active_loop: weather_form
   steps:
   - action: weather_form
-  - active_loop: null
   - slot_was_set:
     - requested_slot: place
+  - active_loop: null
   - action: action_weather

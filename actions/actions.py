@@ -11,6 +11,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import AllSlotsReset
 import requests
 
 dict_weather = {"sn": "It's snowy.",
@@ -51,8 +52,6 @@ class ActionWeather(Action):
         w_ph = dict_weather[abb]
         temp_ph = " The temperature is " + str(round(temp)) + "°C."
 
-        dispatcher.utter_message()
-
         dispatcher.utter_message(text=w_ph + temp_ph)
 
-        return []
+        return [AllSlotsReset()]

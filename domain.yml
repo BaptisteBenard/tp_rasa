@@ -32,7 +32,10 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
   utter_weather:
-  - text: "Where are you?" 
+  - text: "Where are you?"
+
+  utter_default:
+  - text: "Can you reformulate please?"
 
 
 actions:

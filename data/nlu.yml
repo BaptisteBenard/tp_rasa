@@ -108,3 +108,4 @@ nlu:
    - I want to know in [France](place)
    - I live in [Beijing](place)
    - What is the weather in [Ireland](place) ? 
+   - I am in [Carcassonne](place)
