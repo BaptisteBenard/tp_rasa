@@ -109,3 +109,16 @@ nlu:
    - I live in [Beijing](place)
    - What is the weather in [Ireland](place) ? 
    - I am in [Carcassonne](place)
+
+- intent: tired
+  examples: |
+   - I'm so tired
+   - I want to die
+   - I want to sleep
+   - I am so sleepy
+   - I am tired
+   - Wanna die
+   - pfffff
+   - ahhhhhhhhh
+   - I need some sleep
+   - Need rest

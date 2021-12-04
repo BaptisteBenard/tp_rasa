@@ -42,8 +42,13 @@ class ActionWeather(Action):
         place = place.lower()
         p = { "query": place }
         r = requests.get("https://www.metaweather.com//api/location/search/", params = p)
-        j = r.json()[0]
+        j = r.json()
 
+        if len(j) == 0:
+            dispatcher.utter_message(text="I don't know this place, can you reformulate please ?")
+            return [AllSlotsReset()]
+
+        j = j[0]
         p = { }
         r = requests.get("https://www.metaweather.com//api/location/" + str(j["woeid"]) + "/", params = p)
         j = r.json()

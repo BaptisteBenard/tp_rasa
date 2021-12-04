@@ -10,6 +10,7 @@ intents:
   - bot_challenge
   - weather
   - weather_location
+  - tired
 
 responses:
   utter_greet:
@@ -36,6 +37,9 @@ responses:
 
   utter_default:
   - text: "Can you reformulate please?"
+
+  utter_song:
+  - text: "Check this [song](https://www.youtube.com/watch?v=dQw4w9WgXcQ) to boost you up!"
 
 
 actions:

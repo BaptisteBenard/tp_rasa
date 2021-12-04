@@ -28,3 +28,23 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: tired path 1
+  steps:
+  - intent: hello
+  - action: utter_greet
+  - intent: mood_tired
+  - action: utter_song
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: tired path 2
+  steps:
+  - intent: hello
+  - action: utter_greet
+  - intent: mood_tired
+  - action: utter_song
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
