@@ -10,7 +10,7 @@ intents:
   - bot_challenge
   - weather
   - weather_location
-  - tired
+  - mood_tired
 
 responses:
   utter_greet:

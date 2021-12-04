@@ -31,7 +31,7 @@ stories:
 
 - story: tired path 1
   steps:
-  - intent: hello
+  - intent: greet
   - action: utter_greet
   - intent: mood_tired
   - action: utter_song
@@ -41,7 +41,7 @@ stories:
 
 - story: tired path 2
   steps:
-  - intent: hello
+  - intent: greet
   - action: utter_greet
   - intent: mood_tired
   - action: utter_song

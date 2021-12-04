@@ -110,7 +110,7 @@ nlu:
    - What is the weather in [Ireland](place) ? 
    - I am in [Carcassonne](place)
 
-- intent: tired
+- intent: mood_tired
   examples: |
    - I'm so tired
    - I want to die
@@ -122,3 +122,5 @@ nlu:
    - ahhhhhhhhh
    - I need some sleep
    - Need rest
+   - I'm tired
+   - Tired

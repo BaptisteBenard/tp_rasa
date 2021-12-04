@@ -17,11 +17,6 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Send a song to cheer up if the user seems tired
-  steps:
-  - intent: tired
-  - action: utter_song
-
 - rule: Activate weather form
   steps:
   - intent: weather

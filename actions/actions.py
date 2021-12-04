@@ -11,7 +11,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import AllSlotsReset
+from rasa_sdk.events import AllSlotsReset, SlotSet
 import requests
 
 dict_weather = {"sn": "It's snowy.",
@@ -46,7 +46,7 @@ class ActionWeather(Action):
 
         if len(j) == 0:
             dispatcher.utter_message(text="I don't know this place, can you reformulate please ?")
-            return [AllSlotsReset()]
+            return [SlotSet("place",None)]
 
         j = j[0]
         p = { }
