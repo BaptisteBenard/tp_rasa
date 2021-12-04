@@ -101,14 +101,17 @@ nlu:
 
 - intent: weather_location
   examples: |
-   - I'm in [Tokyo](place)
-   - In [London](place)
-   - [Paris](place)
-   - I'm next to [Bordeaux](place)
-   - I want to know in [France](place)
-   - I live in [Beijing](place)
-   - What is the weather in [Ireland](place) ? 
-   - I am in [Carcassonne](place)
+   - I'm in [Tokyo](location)
+   - In [London](location)
+   - [Paris](location)
+   - I'm next to [Bordeaux](location)
+   - I want to know in [Berlin](location)
+   - I live in [Beijing](location)
+   - What is the weather in [Dublin](location) ?
+   - I am in [Toulouse](location)
+   - I want to know the weather in [Ankara](location)
+   - Can I know the weather in [Marseille](location) ?
+   - Can you told me the weather in [Helsinki](location) ?
 
 - intent: mood_tired
   examples: |
@@ -124,3 +127,6 @@ nlu:
    - Need rest
    - I'm tired
    - Tired
+   - I am really tired
+   - I am very sleepy today
+   - I really need sleep

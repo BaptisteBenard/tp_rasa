@@ -38,6 +38,9 @@ responses:
   utter_default:
   - text: "Can you reformulate please?"
 
+  utter_start:
+  - text: "Hello, I am a weather chatbot designed by Lucas and Baptiste."
+
   utter_song:
   - text: "Check this [song](https://www.youtube.com/watch?v=dQw4w9WgXcQ) to boost you up!"
 
@@ -46,14 +49,15 @@ actions:
   - action_weather
 
 entities:
-  - place
+  - location
+
 
 slots:
   place:
     type: text
     mappings:
       - type: from_entity
-        entity: place
+        entity: location
 
 forms:
   weather_form:
